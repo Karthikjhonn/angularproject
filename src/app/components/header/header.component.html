@@ -1,0 +1,144 @@
+<mat-toolbar color="primary"
+    class="w-100 px-0 {{colorPanel==1?'bg-p':colorPanel==2?'bg-indigo':colorPanel==3?'bg-pink':colorPanel==4?'bg-info':''}} ">
+    <header class="d-md-flex justify-content-between align-items-center w-100 shadow  px-xl-3 py-lg-2 w-100 ">
+
+        <div class="d-none d-md-flex d-flex gap-1  ">
+            <a [routerLink]="['']" class="text-decoration-none text-white d-block"><button mat-button ><img
+                        src="https://material.angular.io/assets/img/homepage/angular-white-transparent.svg" class="mb-1"
+                        style="width: 25px;">Angular</button></a>
+            <a [routerLink]="['component']" class="text-decoration-none text-white d-block "><button mat-button
+                    class="fw-bold">Components</button></a>
+            <a [routerLink]="['cdkCategories']" class="text-decoration-none text-white d-block"><button mat-button
+                    class="fw-bold">CDK</button></a>
+            <a [routerLink]="['guides']" class="text-decoration-none text-white d-block"><button mat-button
+                    class="fw-bold">Guides</button></a>
+            <a [routerLink]="['admin']" class="text-decoration-none  d-block"><button mat-raised-button
+                    class="fw-bold text-white bg-danger">Admin</button></a>
+        </div>
+        <!-- Small devices start-->
+        <section
+            class="d-md-none w-100  {{colorPanel==1?'bg-p':colorPanel==2?'bg-indigo':colorPanel==3?'bg-pink':colorPanel==4?'bg-info':''}}">
+
+            <div class="d-flex justify-content-between  align-items-center  pt-2">
+                <a [routerLink]="['']" class="text-decoration-none text-white d-block"><button mat-button class=""><img
+                            src="https://material.angular.io/assets/img/homepage/angular-white-transparent.svg"
+                            class="mb-1" style="width: 25px;">Angular</button></a>
+
+                <div class="d-flex align-items-center  gap-2">
+
+                    <div>
+                        <button mat-button matTooltip="Select a version of the document"
+                            [matMenuTriggerFor]="version"><mat-icon>keyboard_arrow_down</mat-icon>5.5.1.2</button>
+                        <mat-menu #version="matMenu">
+                            <button mat-menu-item *ngFor="let listItems of list "><span>{{listItems}}</span></button>
+                        </mat-menu>
+                    </div>
+
+                    <div>
+                        <button mat-icon-button matTooltip="Select a theme of the documentation"
+                            [matMenuTriggerFor]="colors"><mat-icon>color_lens</mat-icon></button>
+                        <mat-menu #colors="matMenu">
+
+                            <mat-radio-group aria-label="Select an option">
+                                <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                        (click)="getBgColor($event)" value="1">Deep red &
+                                        Amber</mat-radio-button><mat-icon
+                                        color="warn">space_dashboard</mat-icon></button>
+                                <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                        (click)="getBgColor($event)" value="2">indigo&pink</mat-radio-button><mat-icon
+                                        color="warn">space_dashboard</mat-icon></button>
+                                <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                        (click)="getBgColor($event)" value="3">pink &
+                                        BlueGray</mat-radio-button><mat-icon
+                                        color="warn">space_dashboard</mat-icon></button>
+                                <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                        (click)="getBgColor($event)" value="4">Purple &
+                                        Green</mat-radio-button><mat-icon
+                                        color="warn">space_dashboard</mat-icon></button>
+                            </mat-radio-group>
+
+
+                        </mat-menu>
+                    </div>
+
+                    <div class="px-4">
+                        <button mat-mini-fab class="text-white d-lg-none " color="primary">
+                            <img
+                                src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-evenly py-2 ">
+                <a [routerLink]="['component']" class="text-decoration-none text-white d-block "><button mat-button
+                        class="fw-bold">Components</button></a>
+                <a [routerLink]="['cdkCategories']" class="text-decoration-none text-white d-block"><button mat-button
+                        class="fw-bold">CDK</button></a>
+                <a [routerLink]="['guides']" class="text-decoration-none text-white d-block"><button mat-button
+                        class="fw-bold">Guides</button></a>
+                <a [routerLink]="['admin']" class="text-decoration-none  text-white d-block"><button mat-raised-button
+                        class="fw-bold text-white bg-danger">Admin</button></a>
+            </div>
+
+        </section>
+        <!-- small devices end -->
+
+        <div class="d-flex align-items-center gap-2 d-none d-md-flex">
+
+            <div>
+                <button mat-button matTooltip="Select a version of the document"
+                    [matMenuTriggerFor]="version"><mat-icon>keyboard_arrow_down</mat-icon>5.5.1.2</button>
+                <mat-menu #version="matMenu">
+                    <button mat-menu-item *ngFor="let listItems of list "><span>{{listItems}}</span></button>
+                </mat-menu>
+            </div>
+
+            <div>
+                <button mat-icon-button matTooltip="Select a theme of the documentation"
+                    [matMenuTriggerFor]="colors"><mat-icon>color_lens</mat-icon></button>
+                <mat-menu #colors="matMenu">
+
+                    <mat-radio-group aria-label="Select an option">
+                        <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                (click)="getBgColor($event)" value="1">Deep red & Amber</mat-radio-button><mat-icon
+                                color="warn">space_dashboard</mat-icon></button>
+                        <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                (click)="getBgColor($event)" value="2">indigo&pink</mat-radio-button><mat-icon
+                                color="warn">space_dashboard</mat-icon></button>
+                        <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                (click)="getBgColor($event)" value="3">pink & BlueGray</mat-radio-button><mat-icon
+                                color="warn">space_dashboard</mat-icon></button>
+                        <button mat-menu-item class="d-flex align-items-center "><mat-radio-button
+                                (click)="getBgColor($event)" value="4">Purple & Green</mat-radio-button><mat-icon
+                                color="warn">space_dashboard</mat-icon></button>
+                    </mat-radio-group>
+
+
+                </mat-menu>
+            </div>
+
+            <div>
+                <button mat-button class="d-none d-md-flex"><img
+                        src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"
+                        class="pe-1 mb-1"><span>Github</span></button>
+            </div>
+
+        </div>
+    </header>
+
+    <mat-toolbar-row *ngIf="heading!=='home' && heading!=='signup' "
+        class="px-md-2 ps-1 d-none d-lg-block py-2 fw-normal {{colorPanel==1?'bg-p':colorPanel==2?'bg-indigo':colorPanel==3?'bg-pink':colorPanel==4?'bg-info':''}}"><button
+            mat-button class=" d-lg-none"><mat-icon class=" ps-1">menu</mat-icon></button><span
+            class="ms-1 ms-lg-4 fw-normal font-monospace text-capitalize ">{{heading}}</span></mat-toolbar-row>
+    <!-- small devices -->
+    <mat-toolbar-row
+        class="px-md-2 ps-1 d-lg-none py-2 fw-normal {{colorPanel==1?'bg-p':colorPanel==2?'bg-indigo':colorPanel==3?'bg-pink':colorPanel==4?'bg-info':''}}">
+        <button mat-button class=" d-lg-none" (click)="menuChange()"><mat-icon
+                class=" ps-1">menu</mat-icon></button><span class="ms-1 ms-lg-4 fw-normal font-monospace "
+            [textContent]="heading"></span></mat-toolbar-row>
+</mat-toolbar>
+
+
+<!-- (click)="sideNav.toggle()" -->

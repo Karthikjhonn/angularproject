@@ -1,0 +1,32 @@
+<section class="vh-75 d-flex align-items-center">
+<div class="my-5 row col-lg-4 mx-auto" >
+    <h1 class="text-center">{{formTitle}}</h1>
+    <form class="border py-5 border-dark rounded-1" [formGroup]="Login" (ngSubmit)="getData()" method="POST"  >
+        <div class="form-group mb-3 " [ngClass]="{'success': Login.controls.Email.valid && Login.controls.Email.touched }"  >
+            <label for="email" class="form-label fw-bold">Email address</label>
+            <input type="email" id="email" placeholder="Email :"  class="w-100 px-2 py-2 border-0 border-bottom"  formControlName="Email" >
+            <p class="error py-1" *ngIf="Login.controls.Email.invalid && Login.controls.Email.touched"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px;" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>Email required</p>
+        </div>
+        <div class="form-group mb-3"  [ngClass]="{'success': Login.controls.Password.valid && Login.controls.Password.touched}">
+            <label for="password" class="form-label fw-bold"> Password </label>
+            <input type="password" minlength="8" id="password"placeholder="password :" class="w-100 px-2 py-2 border-0 border-bottom" formControlName="Password" >
+            <p class="error py-1" *ngIf="Login.controls.Password.invalid && Login.controls.Password.touched"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px;" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>password required</p>
+        </div>
+        <div class="form-group mb-3"  [ngClass]="{'success': Login.controls.correctPassword.valid && Login.controls.correctPassword.touched}" *ngIf="isLogedin">
+            <label for="correctPassword" class="form-label fw-bold">Conform Password </label>
+            <input type="Password" minlength="8"  id="correctPassword" placeholder="password :" class="w-100 px-2 py-2 border-0 border-bottom" formControlName="correctPassword" >
+            <p class="error py-1" *ngIf=" Login.controls.Password.value != Login.controls.correctPassword.value &&  Login.controls.correctPassword.touched " ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px;" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>password not match </p>
+        </div>
+        <div class="form-group mb-3 d-flex align-items-center" *ngIf="isLogedin" >
+            <input type="checkbox" id="terms" value="true"  required formControlName="termsandcondition"><label for="terms" class="ps-1">I accept</label>
+        </div>
+        <div class="form-group mb-3">
+            <a class="text-primary" > {{loginMessage}} <u type="button" (click)="isLogin()" >{{loginText}}</u></a>
+        </div>
+        <button mat-flat-button color="primary" class="w-100" [disabled]="disableBtn">{{btnText}}</button>
+    </form>
+</div>
+</section>

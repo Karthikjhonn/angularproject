@@ -1,0 +1,25 @@
+
+<mat-drawer-container>
+    <!-- small devices -->
+    <mat-drawer mode="side" [opened]="menuValue"  class="d-lg-none ">
+        <div *ngFor="let data of buttons"  >    
+            <a [routerLink]="data.path" class="text-decoration-none  d-block">
+                <button mat-button class="w-100 text-black-50 px-3 py-4 my-1 fw-normal rounded-0"><p [textContent]="data.btn" ></p></button></a>
+            </div>
+    </mat-drawer>
+
+    <mat-drawer mode="side" opened class="d-none d-lg-block w-25">
+        <div *ngFor="let data of buttons"  >    
+        <a [routerLink]="data.path" class="text-decoration-none  d-block">
+            <button mat-button class="w-100 text-black-50 px-3 py-4 my-1 fw-normal rounded-0"><p [textContent]="data.btn" ></p></button></a>
+        </div>
+    </mat-drawer>
+
+    <!-- <mat-drawer-content class="w-75 ms-auto p-1 pt-4">
+        <p class="mb-3" *ngFor="let text of content">{{ text }}</p>
+        <router-outlet></router-outlet>
+        components work
+    </mat-drawer-content> -->
+   
+    <app-text-content ></app-text-content>
+</mat-drawer-container>

@@ -1,0 +1,48 @@
+
+<mat-toolbar>
+    <mat-toolbar-row  class=" bg-p {{bgColor==1?'bg-p':bgColor==2?'bg-indigo':bgColor==3?'bg-pink':bgColor==4?'bg-info':''}}" >
+        <div class="text-center w-100 text-white ">
+            <h1 class="fw-bold fs-1 ">Angular Material</h1>
+            <p class="fs-5 fw-normal">Material Design components for Angular</p>
+            <a [routerLink]="['signup']" class="text-decoration-none ">
+                <button mat-flat-button class="bg-white my-lg-5 px-4 text-black-50">Get Started</button>
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+    
+<div class="container">
+    <div class="row">
+        <div class=" col-md-4 py-5 px-2">
+            <ul class="text-black-50 list-unstyled">
+                <h2>High quality</h2>
+                <li><p>Internationalized and accessible components for everyone. Well tested to ensure performance and reliability.</p></li>
+                <li><p>Straightforward APIs with consistent cross platform behaviour.</p></li>
+            </ul>
+        </div>
+        <div class=" col-md-4 py-5 px-2">
+            <ul class="text-black-50 list-unstyled">
+                <h2> Versatile</h2>
+                <li><p>Provide tools that help developers build their own custom components with common interaction patterns.</p></li>
+                <li><p>Customizable within the bounds of the Material Design specification..</p></li>
+            </ul>
+        </div>
+        <div class=" col-md-4 py-5 px-2">
+            <ul class="text-black-50 list-unstyled">
+                <h2>Frictionless</h2>
+                <li><p>Built by the Angular team to integrate seamlessly with Angular.</p></li>
+                <li><p>Start from scratch or drop into your existing applications.</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="mb-5 ">
+
+    <mat-grid-list cols="3"  class="d-none d-lg-flex">
+        <mat-grid-tile><app-card></app-card></mat-grid-tile>
+        <mat-grid-tile><app-card></app-card></mat-grid-tile>
+        <mat-grid-tile><app-card></app-card></mat-grid-tile>
+      </mat-grid-list>
+    
+</div>
+

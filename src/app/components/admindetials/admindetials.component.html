@@ -1,0 +1,18 @@
+<section class=" text-white min-vh-100 row w-100">
+    <div class="col-md-8 bg-dark mx-auto  bg-warning">
+    <h1 class="text-center fw-light fs-1 text-primary py-4">Admin Details</h1>
+        <div class=" text-start ps-4 mb-3 py-4">
+            <h1 class="bg-danger d-inline-block px-2">ID : {{adminSingleData.id}}</h1>
+            <h1 class="underline">Name : <u>{{adminSingleData.name}}</u></h1>
+            <h1>UserName : {{adminSingleData.username}}</h1>
+            <h1>Email :&#x2709; {{adminSingleData.email}}</h1>
+            <h1>Address : {{adminSingleData.address.street}}, street, {{adminSingleData.address.suite}}, {{adminSingleData.address.city}} city, <br>{{adminSingleData.address.zipcode}}</h1>
+            <h1>Contact : {{adminSingleData.phone}}</h1>
+            <h1>Website : {{adminSingleData.website}}</h1>
+            <h1>CompanyName : {{adminSingleData.company.name}}</h1>
+            <h1>Phrase : {{adminSingleData.company.catchPhrase}}</h1>
+            <h1>Role : {{adminSingleData.company.bs}}</h1>
+           <div class="text-center"><button mat-raised-button class="bg-danger text-white" (click)="adminPage()">Back</button></div>
+        </div>
+    </div>
+</section>

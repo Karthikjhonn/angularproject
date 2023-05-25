@@ -1,0 +1,25 @@
+<section class="min-vh-100 d-flex align-items-center w-100">
+  <div class="col-lg-8 col-12 mx-auto px-2 my-0 table-responsive">
+    <h1 class="text-center fw-light fs-1 text-primary  py-4 m-0">Admin Page</h1>
+    <table class="table table-dark table-hover  w-100 " >
+      <thead>
+        <tr class="text-start ">
+          <th><u>ID</u></th>
+          <th><u>Name</u></th>
+          <th><u>UserName</u></th>
+          <th><u>Email</u></th>
+          <th><u>Company</u></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of adminData" class="text-start" (click)="admindetials({data})" >
+          <td class="bg-danger">{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.username}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.company.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

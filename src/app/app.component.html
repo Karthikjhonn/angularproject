@@ -1,0 +1,193 @@
+<!-- <div>
+  <h1>Hello</h1>
+  <h1> -->
+    <!-- {{title}} 
+    {{obj.name}}{{obj.age}}<br>
+    {{arry}}
+  </h1>
+
+if /else-----------
+  <h1 *ngIf="num==15; then trueB else falseB ">num: {{num}}</h1>
+  <ng-template #trueB>Content to render when condition is true{{num}}.</ng-template>
+  <ng-template #falseB>Content to render when condition is false{{num}}.</ng-template>
+
+
+
+  <ul *ngFor="let c of arry">
+    <li>{{c}}</li>
+  </ul>
+
+  <ul *ngFor="let obje of empList" >
+    <li >{{obje.empID}}   {{obje.empName}} </li>
+  </ul>
+
+</div> -->
+<!-- 
+<hr>
+<h1 >{{myVal}}<br>{{number}}</h1>
+<div>
+  <button (click)="count()">click</button>
+</div>
+<h1 *ngIf="name=='john'; then trueB else falseB ">num: {{num}}</h1>
+<h1 style="color: red;">{{number===4?"True":"false"}}</h1>
+  <ng-template #trueB>Content to render when condition is true <b><u> {{name}}</u></b> </ng-template>
+  <ng-template #falseB>Content to render when condition is false<b><u> {{name}}</u></b>.</ng-template> -->
+
+
+ 
+<!-- Angular Material UI --------------------------------->
+
+<!-- <div class="d-flex container">
+  <h1><u>Buttons :</u></h1>
+  <button mat-raised-button color="accent" >Raised</button>
+  <button mat-button color="primary">default</button>
+  <button mat-stroked-button  color="primary">stroked</button>
+  <button mat-flat-button color="warn">flat Btn</button>
+</div>
+
+<div class="d-flex container">
+  <h1><u>Icons :</u></h1>
+  <mat-icon color="warn">home</mat-icon>
+  <mat-icon color="primary">settings</mat-icon>
+  <mat-icon color="accent">book</mat-icon>
+</div>
+
+<div class="d-flex container">
+  <h1><u>Buttons&Icons :</u></h1>
+  <button mat-icon-button color="warn"><mat-icon >home</mat-icon></button>
+  <button mat-icon-button color="primary"><mat-icon >settings</mat-icon></button>
+  <button mat-icon-button color="accent"><mat-icon >book</mat-icon></button>
+</div> -->
+
+        <!-- Card ----------------------------------------->
+
+<!-- <div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Title</mat-card-title>
+      <mat-card-subtitle>Subtittle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>Simple card content</mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Click</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="container">
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions style="display: flex;gap: 1rem;">
+    <button mat-raised-button color="accent">LIKE</button>
+    <button mat-icon-button color="warn"><mat-icon>share</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
+</div> -->
+
+      <!--  List-items -------------------------------------->
+
+<!-- <div class="container">
+  <mat-chip-listbox >
+    <mat-chip-option>Apple</mat-chip-option>
+    <mat-chip-option color="warn">Grapes</mat-chip-option>
+    <mat-chip-option color="primary">orange</mat-chip-option>
+    <mat-chip-option color="accent">Rose</mat-chip-option>
+  </mat-chip-listbox>
+</div> -->
+
+          <!-- Grid --------------------------------->
+
+<!-- <div class="container">
+<mat-grid-list cols="3" >
+  <mat-grid-tile><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde distinctio quod cupiditate numquam qui atque? Aut id quo animi maxime minus libero. Reprehenderit alias quam repudiandae sit cupiditate sint.</p></mat-grid-tile>
+  <mat-grid-tile><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde distinctio quod cupiditate numquam qui atque? Aut id quo animi maxime minus libero. Reprehenderit alias quam repudiandae sit cupiditate sint.</p></mat-grid-tile>
+  <mat-grid-tile><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde distinctio quod cupiditate numquam qui atque? Aut id quo animi maxime minus libero. Reprehenderit alias quam repudiandae sit cupiditate sint.</p></mat-grid-tile>
+  <mat-grid-tile><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde distinctio quod cupiditate numquam qui atque? Aut id quo animi maxime minus libero. Reprehenderit alias quam repudiandae sit cupiditate sint.</p></mat-grid-tile>
+</mat-grid-list>
+</div> -->
+
+
+<!-- Menu -------------------------->
+
+<!-- <button mat-raised-button color="warn" [matMenuTriggerFor]="myMenu">Menu</button>
+<mat-menu #myMenu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu> -->
+
+<!-- Scrolling -------------------->
+<!-- <div class="container">
+  <cdk-virtual-scroll-viewport appendOnly itemSize="5" class="example-viewport">
+    <div *cdkVirtualFor="let item of arry" class="example-item">{{item}}</div>
+  </cdk-virtual-scroll-viewport>
+
+</div> -->
+
+
+<!-- ToolBar ------------------------------>
+
+<!-- <div class="container">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button color="warn" >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button  >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+
+<div class="container">
+  <mat-toolbar color="accent" id="bar">
+    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+    <span>Logo</span>
+    <span class="example-spacer"></span>
+    <button mat-mini-fab color="warn" ><mat-icon>favorites</mat-icon></button>
+    <button mat-icon-button ><mat-icon>share</mat-icon></button>
+  </mat-toolbar>
+</div> -->
+
+<!-- SideNav -------------------------------->
+
+
+<!-- <div class="container">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <ul>
+        <li *ngFor="let a of list">{{a}}</li>
+      </ul>
+    </mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+  </mat-drawer-container>
+</div> -->
+
+<!-- ToolTip --------------------------->
+
+<!-- <div class="container mx-auto">
+  <button mat-mini-fab color="accent" matTooltip="click">click</button>
+</div> -->
+
+<!-- <h1 class="card">app</h1> -->
+
+
+<app-first-component  ></app-first-component>
+
+
+

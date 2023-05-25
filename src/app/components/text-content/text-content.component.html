@@ -1,0 +1,48 @@
+<!-- <section class="row w-100"> -->
+    <!-- <div class="col-lg-10 "> -->
+        <!-- <mat-drawer-container > -->
+            <!-- small devices -->
+            <!-- <mat-drawer mode="side"  #sideNav class="d-lg-none d-block ">
+                <button mat-button class="w-100 text-black px-3 py-4 my-1 fw-normal rounded-0"   *ngFor="let btn of buttons">{{btn}}</button>
+            </mat-drawer>
+    
+            <mat-drawer mode="side" opened  class="d-none d-lg-block">
+                <button mat-button class="w-100 text-black px-3 py-4 my-1 fw-normal rounded-0"   *ngFor="let btn of buttons">{{btn}}</button>
+            </mat-drawer> -->
+            <!-- main Content -->
+            <!-- <mat-drawer-content class="w-75 ms-auto p-1 pt-4">
+                <p class="mb-3" *ngFor="let text of content" >{{text}}</p>
+                <router-outlet></router-outlet>
+            </mat-drawer-content> -->
+            
+        <!-- </mat-drawer-container> -->
+        <!-- <app-sidenav></app-sidenav>
+    </div> -->
+    <!-- <div class=" col-2 d-none d-lg-block ps-0">
+        <ul class="list-unstyled  px-2 mt-5   border-start border-4  border-primary ">
+            <li ><small><b>Overview Content</b></small></li>
+            <li *ngFor="let links of sideLinks" ><a href="#" class="text-decoration-none text-black-50 a-hover"><small>{{links}}</small></a></li>
+        </ul>
+    </div> -->
+
+<!-- </section> -->
+
+
+
+<!-- small devices -->
+    <mat-drawer-content class="w-100 ms-auto  p-1 pt-4  d-lg-none" >
+        <!-- <p class="mb-3" *ngFor="let text of content" >{{text}}</p> -->
+
+        
+        <router-outlet></router-outlet>
+        
+        <!-- <app-autocomplete></app-autocomplete> -->
+        <!-- <a [routerLink]="'add'">add</a><br>
+        <router-outlet name='first'></router-outlet> -->
+        
+    </mat-drawer-content>
+<!-- large devices -->
+    <mat-drawer-content class="w-75 ms-auto  p-1 pt-4  d-lg-block d-none">
+            <!-- <p class="mb-3" *ngFor="let text of content" >{{text}}</p> -->
+            <router-outlet></router-outlet>
+    </mat-drawer-content>

@@ -1,0 +1,8 @@
+mat-toolbar-row{
+    min-height: 55vh;
+    background-image:url(https://material.angular.io/angular-white-transparent.d4d5ed2946afa9f1.svg);
+    background-repeat: no-repeat;
+    background-size:20%;
+    background-position:80%;
+   
+}
